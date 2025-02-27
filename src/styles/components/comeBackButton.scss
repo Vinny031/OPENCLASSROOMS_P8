@@ -7,9 +7,9 @@ $text-color: #282936;
 $text-hover-color: #fff;
 $transition-timing: cubic-bezier(0.65, 0, 0.076, 1);
 
-button {
+.come-back-button {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   cursor: pointer;
   outline: none;
   border: 0;
@@ -19,65 +19,65 @@ button {
   padding: 0;
   font-size: inherit;
   font-family: inherit;
-  
-  &.come-back-button {
-    width: 12rem;
-    height: auto;
+  width: 16rem;
+  height: auto;
+  z-index: 10;
+  white-space: nowrap;
 
-    .circle {
+  .circle {
+    transition: all 0.45s $transition-timing;
+    position: relative;
+    display: block;
+    margin: 0;
+    width: $circle-size;
+    height: $circle-size;
+    background: $circle-background;
+    border-radius: 1.625rem;
+  }
+
+  .come-back-button-text {
+    transition: all 0.45s $transition-timing;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 2rem;
+    color: $text-color;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: roboto;
+  }
+
+  .circle .icon {
+    transition: all 0.45s $transition-timing;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: $icon-background;
+
+    &.arrow {
       transition: all 0.45s $transition-timing;
-      position: relative;
-      display: block;
-      margin: 0;
-      width: $circle-size;
-      height: $circle-size;
-      background: $circle-background;
-      border-radius: 1.625rem;
+      left: 0.625rem;
+      width: 1.125rem;
+      height: 0.125rem;
+      background: none;
 
-      .icon {
-        transition: all 0.45s $transition-timing;
+      &::before {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        background: $icon-background;
-
-        &.arrow {
-          transition: all 0.45s $transition-timing;
-          left: 0.625rem;
-          width: 1.125rem;
-          height: 0.125rem;
-          background: none;
-
-          &::before {
-            position: absolute;
-            content: "";
-            top: -0.29rem;
-            right: 0.0625rem;
-            width: 0.625rem;
-            height: 0.625rem;
-            border-top: 0.125rem solid $arrow-color;
-            border-right: 0.125rem solid $arrow-color;
-            transform: rotate(45deg);
-          }
-        }
+        content: "";
+        top: -0.29rem;
+        right: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid $arrow-color;
+        border-right: 0.125rem solid $arrow-color;
+        transform: rotate(45deg);
       }
-    }
-
-    .come-back-button-text {
-      transition: all 0.45s $transition-timing;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 0.75rem 0;
-      margin: 0 0 0 1.85rem;
-      color: $text-color;
-      font-weight: 700;
-      line-height: 1.6;
-      text-align: center;
-      text-transform: uppercase;
     }
   }
 

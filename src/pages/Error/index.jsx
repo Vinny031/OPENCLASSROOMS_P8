@@ -11,7 +11,7 @@ const Error = () => {
   }, []);
 
     return (
-        <div className="error_body">
+        <>
             <Header />
             <div className="box-of-star1">
                 <div className="star star-position1"></div>
@@ -71,7 +71,7 @@ const Error = () => {
                 </Link>
             </div>
             <Footer />
-        </div>
+        </>
     )
 };
 

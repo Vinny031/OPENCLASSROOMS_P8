@@ -63,7 +63,12 @@ const Error = () => {
             <div className="error_container">
                 <img src={ERROR} alt="Erreur 404 rouge." className="error_logo" id="error_logo"/>
                 <p>Oups! La page que vous demandez n'existe pas.</p>
-                <Link to="/" className="error_link">Retourner sur la page d'accueil</Link>
+                <Link to="/" className="come-back-button">
+                    <span className="circle" aria-hidden="true">
+                        <span className="icon arrow"></span>
+                    </span>
+                    <span className="come-back-button-text">Revenez à la maison</span>
+                </Link>
             </div>
             <Footer />
         </div>

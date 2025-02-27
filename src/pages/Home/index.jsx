@@ -1,7 +1,12 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import { useEffect } from "react"
 
-const Home =() => {
+const Home = () => {
+    useEffect(() => {
+        document.title = "Accueil | VF Portfolio";
+     }, []);
+
     return (
         <div>
             <Header />

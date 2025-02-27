@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Error = () => {
     useEffect(() => {
-    document.title = "Erreur | V/F Portfolio";
+    document.title = "Erreur | VF Portfolio";
   }, []);
 
     return (

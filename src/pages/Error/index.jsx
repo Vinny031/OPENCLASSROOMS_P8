@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom'
 
 const Error = () => {
     useEffect(() => {
-    document.title = "Erreur | V/F Portfolio";
+    document.title = "Erreur | VF Portfolio";
   }, []);
 
     return (
-        <div className="error_body">
+        <>
             <Header />
             <div className="box-of-star1">
                 <div className="star star-position1"></div>
@@ -63,10 +63,15 @@ const Error = () => {
             <div className="error_container">
                 <img src={ERROR} alt="Erreur 404 rouge." className="error_logo" id="error_logo"/>
                 <p>Oups! La page que vous demandez n'existe pas.</p>
-                <Link to="/" className="error_link">Retourner sur la page d'accueil</Link>
+                <Link to="/" className="come-back-button">
+                    <span className="circle" aria-hidden="true">
+                        <span className="icon arrow"></span>
+                    </span>
+                    <span className="come-back-button-text">Revenez à la maison</span>
+                </Link>
             </div>
             <Footer />
-        </div>
+        </>
     )
 };
 

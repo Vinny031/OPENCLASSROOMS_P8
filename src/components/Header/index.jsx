@@ -1,14 +1,18 @@
+import ThemeToggle from "../Toggle_DarkMode"
+import LanguageToggle from "../Toggle_Language"
+
 const Header = () => {
     return (
-        <header>
-            <h1>Mon portfolio</h1>
-            <nav>
+        <header className="header">
+            <LanguageToggle />
+            <nav className="nav">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/about">À propos</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
+            <ThemeToggle />
         </header>
     )
 }

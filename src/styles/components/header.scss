@@ -6,6 +6,7 @@ $header-bg-scrolled: rgba(255, 255, 255, 0.7);
 $text-color: #333;
 $hover-color: #000;
 $font-family: "Gill Sans", sans-serif;
+$underline-color: $hover-color; 
 
 body {
   font-family: $font-family;
@@ -55,10 +56,18 @@ body {
     font-weight: bold;
     padding: 10px;
     text-transform: uppercase;
-    transition: color 0.3s;
+    transition: color 0.3s, text-decoration 0.3s;
 
     &:hover {
       color: $hover-color;
+      text-decoration: underline;
+      text-decoration-color: $underline-color;
+    }
+
+    &.active {
+      color: $hover-color;
+      text-decoration: underline;
+      text-decoration-color: $underline-color;
     }
   }
 }

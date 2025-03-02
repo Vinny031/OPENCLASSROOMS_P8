@@ -1,26 +1,38 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const LanguageToggle = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [isEnglish, setIsEnglish] = useState(true);
 
-  const handleToggle = () => {
-    setIsEnglish(!isEnglish);
-// Insérer ici la logique pour changer la langue de l'application
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const changeLanguage = (lang) => {
+    setIsEnglish(lang === "en");
+    setIsOpen(false);
+    // Insérer ici la logique pour changer la langue de l'application
+    console.log("Langue changée en :", lang);
   };
 
   return (
-    <label className="language-toggle">
-      <input
-        type="checkbox"
-        className="language-checkbox"
-        checked={isEnglish}
-        onChange={handleToggle}
-      />
-      <span className="slider">
-        <span className="lang-en">EN</span>
-        <span className="lang-fr">FR</span>
-      </span>
-    </label>
+    <div className="language-toggle">
+      <button className="language-icon" onClick={toggleMenu}>
+        <FontAwesomeIcon icon={faGlobe} />
+      </button>
+      {isOpen && (
+        <ul className="language-dropdown">
+          <li onClick={() => changeLanguage("en")} className={isEnglish ? "active" : ""}>
+            EN
+          </li>
+          <li onClick={() => changeLanguage("fr")} className={!isEnglish ? "active" : ""}>
+            FR
+          </li>
+        </ul>
+      )}
+    </div>
   );
 };
 

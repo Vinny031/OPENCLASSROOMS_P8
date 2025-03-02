@@ -1,83 +1,62 @@
-$toggle-width: 40px;
-$toggle-height: 20px;
-$circle-size: 18px;
-$light-color: #efefef;
-$dark-color: #2a2a2a;
-$text-color: #fff;
+$icon-color: #333;
+$hover-color: #007bff;
+$dropdown-bg: white;
+$dropdown-border-color: #ccc;
+$dropdown-hover-bg: #f1f1f1;
+$active-bg: #007bff;
+$active-color: white;
+$dropdown-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+$dropdown-padding: 5px 0;
+$dropdown-min-width: 80px;
+$dropdown-border-radius: 5px;
+$font-size: 24px;
 
 .language-toggle {
-  display: inline-block;
   position: relative;
-  width: $toggle-width;
-  height: $toggle-height;
-  cursor: pointer;
-  margin: 50px;
+  display: inline-block;
+  margin: 0 50px;
 
-  .language-checkbox {
-    appearance: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0;
+  .language-icon {
+    font-size: $font-size;
     cursor: pointer;
+    background: none;
+    border: none;
+    color: $icon-color;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $hover-color;
+    }
   }
 
-  .slider {
-    width: 100%;
-    height: 100%;
-    background: $light-color;
-    border-radius: 99em;
+  .language-dropdown {
     position: absolute;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background 0.4s;
+    top: 100%;
+    right: 0;
+    background: $dropdown-bg;
+    border: 1px solid $dropdown-border-color;
+    border-radius: $dropdown-border-radius;
+    padding: $dropdown-padding;
+    list-style: none;
+    margin: 0;
+    min-width: $dropdown-min-width;
+    z-index: 100;
+    box-shadow: $dropdown-shadow;
 
-    &::before {
-      content: "";
-      width: $circle-size;
-      height: $circle-size;
-      position: absolute;
-      top: 1px;
-      left: 1px;
-      background: $dark-color;
-      border-radius: 50%;
-      transition: all 0.4s;
-    }
+    li {
+      padding: 8px 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
 
-    .lang-en,
-    .lang-fr {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 10px;
-      font-weight: bold;
-      color: $text-color;
-      transition: color 0.4s;
-    }
+      &:hover {
+        background-color: $dropdown-hover-bg;
+      }
 
-    .lang-en {
-      left: 3px;
-      opacity: 1;
-    }
-
-    .lang-fr {
-      right: 3px;
-      opacity: 0;
-    }
-  }
-
-  .language-checkbox:checked + .slider {
-    background: $light-color;
-
-    &::before {
-      left: calc(100% - #{$circle-size} - 2px);
-    }
-
-    .lang-en {
-      opacity: 0;
-    }
-
-    .lang-fr {
-      opacity: 1;
+      &.active {
+        font-weight: bold;
+        background-color: $active-bg;
+        color: $active-color;
+      }
     }
   }
 }

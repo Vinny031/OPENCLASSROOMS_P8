@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
-      <footer>
-        <p>©2020 Kasa. All {"\n"}rights reserved</p>
+      <footer className="footer">
+        <p>©2025 Site forgé par Vincent Fuseau | Tous droits réservés</p>
       </footer>
     );
   }

@@ -1,5 +1,5 @@
-import ThemeToggle from "../Toggle_DarkMode"
-import LanguageToggle from "../Toggle_Language"
+import ThemeToggle from "./Toggle_DarkMode"
+import LanguageToggle from "./Toggle_Language"
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 

@@ -1,0 +1,17 @@
+@use '@/styles/components/section_about/about_card/about_card.scss' as *;
+
+.about {
+    width: 100%;
+    height: 700px;
+    background-color: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+  }
+  
+.about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

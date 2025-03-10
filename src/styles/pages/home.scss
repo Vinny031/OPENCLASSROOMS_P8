@@ -1,8 +1,11 @@
 @use '@/styles/components/header.scss' as*;
 @use '@/styles/components/footer.scss' as*;
+@use '@/styles/components/section_about/section_about.scss' as *;
 
 .homepage-body {
     display: flex;
+    justify-content: center;
+    align-items: space-between;
     flex-direction: column;
     min-height: 84vh;
 }

@@ -1,4 +1,4 @@
-import SocialIcons from "../Social"
+import SocialIcons from "./Social"
 
 const Footer = () => {
     return (

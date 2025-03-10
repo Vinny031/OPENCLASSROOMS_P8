@@ -1,4 +1,6 @@
 @use '@/styles/components/section_about/about_card/about_card.scss' as *;
+@use '@/styles/components/section_about/about_infotext/about_infotext.scss' as *;
+
 
 .about {
     width: 100%;
@@ -14,4 +16,5 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 50px;
 }

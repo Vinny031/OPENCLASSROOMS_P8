@@ -10,8 +10,8 @@ const Home = () => {
     return (
         <div>
             <Header />
-            <h1>Home Page</h1>
-            <p>Bienvenue to the Home Page</p>
+            <div className="homepage-body">
+            </div>
             <Footer />
         </div>
     )

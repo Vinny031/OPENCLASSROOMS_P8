@@ -1,2 +1,8 @@
 @use '@/styles/components/header.scss' as*;
 @use '@/styles/components/footer.scss' as*;
+
+.homepage-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 84vh;
+}

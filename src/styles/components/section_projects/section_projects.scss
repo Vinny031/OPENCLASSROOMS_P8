@@ -1,0 +1,29 @@
+@use '@/styles/components/section_projects/projects_card/projects_card.scss' as *;
+
+.section_projects{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_projects_carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.section_projects_carousel_button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.section_projects_carousel_cards {
+    display: flex;
+    gap: 20px;
+}

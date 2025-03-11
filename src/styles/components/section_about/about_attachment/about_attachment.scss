@@ -1,0 +1,93 @@
+.about_attachment {
+    text-align: center;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    // Miniature du CV
+    .cv_thumbnail {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+  
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+  }
+  
+  // Modale
+  .modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+  
+    .modal_content {
+      width: 80vw;
+      height: 90vh;
+      background: white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 10px;
+      overflow: hidden;
+      animation: slideDown 0.3s ease-in-out;
+    }
+  
+    .close_button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+      transition: color 0.2s;
+  
+      &:hover {
+        color: red;
+      }
+    }
+  
+    .cv_viewer {
+      flex-grow: 1;
+      width: 100%;
+      height: 100%;
+      border: none;
+      object-fit: contain;
+    }
+  }
+  
+  // Animations
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  

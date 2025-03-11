@@ -1,5 +1,6 @@
 @use '@/styles/components/section_about/about_card/about_card.scss' as *;
 @use '@/styles/components/section_about/about_infotext/about_infotext.scss' as *;
+@use '@/styles/components/section_about/about_attachment/about_attachment.scss' as *;
 
 
 .about {
@@ -7,14 +8,18 @@
     height: 700px;
     background-color: #e8e8e8;
     display: flex;
-    justify-content: center;
-    align-items: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
   }
   
 .about-content {
+  height: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  gap: 2rem;
+  padding: 0 5rem;
 }

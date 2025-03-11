@@ -5,9 +5,11 @@ import About_Attachment from './About_Attachment';
 
 const About = () => {
   return (
-    <section className="about">
-      <h2>À propos</h2>
-      <div className="about-content">
+    <section className="about" id='about'>
+      <div className='section_about_title'>
+        <h2>À propos</h2>
+      </div>
+      <div className="about_content">
         <About_Card />
         <About_Infotext />
         <About_Attachment />

@@ -3,11 +3,3 @@
 @use '@/styles/components/section_about/section_about.scss' as *;
 @use '@/styles/components/section_projects/section_projects.scss' as *;
 @use '@/styles/components/section_contact/section_contact.scss' as *;
-
-.homepage-body {
-    display: flex;
-    justify-content: center;
-    align-items: space-between;
-    flex-direction: column;
-    min-height: 100vh;
-}

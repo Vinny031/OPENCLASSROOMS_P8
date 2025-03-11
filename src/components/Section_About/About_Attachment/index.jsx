@@ -1,9 +1,18 @@
 import React, { useState } from "react";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaDownload } from "react-icons/fa";
 
 const About_Attachment = () => {
   const [isOpen, setIsOpen] = useState(false);
   const closeModal = () => setIsOpen(false);
+  const downloadCV = () => {
+    const cvUrl = "@/assets/CV_DEV.pdf";
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "CV_DEV_VINCENT_FUSEAU.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
 
   return (
     <div className="about_attachment">
@@ -18,6 +27,9 @@ const About_Attachment = () => {
           <div className="modal_content" onClick={(e) => e.stopPropagation()}>
             <button className="close_button" onClick={closeModal}>
               <FaTimes />
+            </button>
+            <button className="download_button" onClick={downloadCV}>
+              <FaDownload />
             </button>
             <iframe 
               src="/assets/CV_DEV.webp"  

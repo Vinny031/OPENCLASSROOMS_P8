@@ -8,17 +8,15 @@ import { useEffect } from "react"
 
 const Home = () => {
     useEffect(() => {
-        document.title = "Vincent Fuseau | Accueil";
+        document.title = "Vincent Fuseau | Portfolio";
      }, []);
 
     return (
-        <div>
+        <div className="homepage_body">
             <Header />
-            <div className="homepage-body">
-                <About />
-                <Projects />
-                <Contact />
-            </div>
+            <About />
+            <Projects />
+            <Contact />
             <Footer />
         </div>
     )

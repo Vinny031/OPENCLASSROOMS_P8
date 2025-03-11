@@ -22,7 +22,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="section_projects">
+    <section className="section_projects" id='projects'>
       <div className="section_projects_carousel">
         <button className="section_projects_carousel_button prev" onClick={handlePrev}>
           Prev

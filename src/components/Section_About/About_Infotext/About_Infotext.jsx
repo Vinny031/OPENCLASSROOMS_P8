@@ -1,3 +1,5 @@
+import './About_Infotext.scss'
+
 const About_Infotext = () => {
     return (
       <div className="about_infotext">

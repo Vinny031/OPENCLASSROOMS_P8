@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaTimes, FaDownload } from "react-icons/fa";
+import './About_Attachment.scss'
 
 const About_Attachment = () => {
   const [isOpen, setIsOpen] = useState(false);

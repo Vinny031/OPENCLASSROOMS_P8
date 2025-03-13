@@ -1,5 +1,6 @@
 import React from 'react';
-import Contact_Form from '../Section_Contact/Contact_Form';
+import Contact_Form from './Contact_Form/Contact_Form.jsx';
+import './Section_Contact.scss'
 
 const Section_Contact = () => {
   return (

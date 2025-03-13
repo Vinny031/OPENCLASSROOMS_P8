@@ -1,8 +1,8 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import About from "@/components/Section_About"
+import About from "@/components/Section_About/Section_About.jsx"
 import Projects from "@/components/Section_Projects/Section_Projects.jsx"
-import Contact from '@/components/Section_Contact';
+import Contact from '@/components/Section_Contact/Section_Contact.jsx';
 
 import { useEffect } from "react"
 

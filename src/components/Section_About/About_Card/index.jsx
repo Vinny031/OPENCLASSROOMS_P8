@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "../../Button/Button.jsx"
 
 const About_Card = () => {
   return (
@@ -10,7 +11,7 @@ const About_Card = () => {
             <img src="../../../../public/assets/AVATAR.webp" alt="Avatar 3D" className='about_card_avatar'/>
         </div>
         <div className='about_card_button_container'>
-            <button className='about_card_button'>Click me</button>
+          <Button onClick={() => alert("Bouton cliqué !")}>Cliquez moi</Button>
         </div>
     </div>
   );

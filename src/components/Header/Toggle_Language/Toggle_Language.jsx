@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import "./Toggle_Language.scss"
 
 const LanguageToggle = () => {
   const [isOpen, setIsOpen] = useState(false);

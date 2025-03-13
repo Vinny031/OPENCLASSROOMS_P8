@@ -1,0 +1,79 @@
+$header-bg: rgba(255, 255, 255, 0.1);
+$header-bg-scrolled: rgba(255, 255, 255, 0.7);
+$text-color: #333;
+$hover-color: #000;
+$font-family: "Gill Sans", sans-serif;
+$underline-color: $hover-color;
+
+body {
+  font-family: $font-family;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: $header-bg;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 40%;
+  margin: 0 auto;
+  z-index: 1000;
+
+  &.scrolled {
+    background: $header-bg-scrolled;
+  }
+
+  .header_logo {
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      height: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+      font-family: roboto;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 10px;
+      text-transform: uppercase;
+      transition: color 0.3s, text-decoration 0.3s;
+
+      &:hover {
+        color: $hover-color;
+        text-decoration: underline;
+        text-decoration-color: $underline-color;
+      }
+
+      &.active {
+        color: #ff9800;
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-color: $underline-color;
+      }
+    }
+  }
+}

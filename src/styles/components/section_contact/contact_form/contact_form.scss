@@ -3,8 +3,12 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+    width: 500px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px;
   }
   
   .contact_form h3 {
@@ -28,7 +32,7 @@
   }
   
   .contact_form_input_group textarea {
-    height: 150px;
+    height: 15rem;
   }
   
   .contact_form button {

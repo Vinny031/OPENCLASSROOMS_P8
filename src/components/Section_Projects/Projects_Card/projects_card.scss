@@ -1,27 +1,32 @@
 .project_card {
   width: 350px;
-  height: 410px;
-  border: 1px solid #ccc;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 50px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project_card_title h3 {
+  padding: 5px;
   height: 50px;
   font-size: 1rem;
   font-family: roboto;
   font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid #333333;
 }
 
 .project_card_media {
   flex-grow: 1;
-  background-color: #f0f0f0;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  border-bottom: 1px solid #333333;
 }
 
 .project_card_video_container {
@@ -30,12 +35,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
+  overflow: hidden;
 }
 
 .project_card_video_container video {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .project_card_images {
@@ -43,13 +49,15 @@
   gap: 10px;
   justify-content: center;
   margin: 10px;
+  height: 20%;
 }
 
 .project_card_image {
-  width: 70px;
-  height: 70px;
+  width: 22%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border: 1px solid #333333;
+  border-radius: 8px;
 }
 
 .project_card_info {
@@ -57,22 +65,28 @@
   text-align: center;
   height: 100px;
   overflow-y: auto;
+  height: 20%;
+  background-color: white;
+  border-top: 1px solid #333333;
+  border-radius: 0 0 10px 10px;
 }
 
 .project_card_info p {
   margin: 0;
   word-wrap: break-word;
+  text-align: justify;
   white-space: normal;
   font-family: roboto;
   font-size: 12px;
 }
 
 .empty_image {
-  background-color: #ccc;
+  background-color: white;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #777;
+  color: #333333;
+  border-top: 1px solid #333333;
 }

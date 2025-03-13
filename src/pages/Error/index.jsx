@@ -1,4 +1,4 @@
-import Header from "@/components/Header"
+import Header from "@/components/Header/Header.jsx"
 import Footer from "@/components/Footer"
 import Astronaut from "@/components/Astronaut"
 import { useEffect } from "react"

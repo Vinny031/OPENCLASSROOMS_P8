@@ -8,16 +8,23 @@ const Projects = () => {
 
   // Charger les données JSON depuis le dossier public
   useEffect(() => {
-    fetch('/data/projects.json')
-      .then(response => response.json())
-      .then(data => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch('/data/projects.json');
+        const data = await response.json();
+  
+        if (!data.projects || data.projects.length === 0) return;
+  
         setProjects(data.projects);
-
+  
         const firstProjectIndex = data.projects.findIndex(project => project.id === "1");
-
-        setCurrentIndex(firstProjectIndex === 0 ? data.projects.length - 1 : firstProjectIndex - 1);
-      })
-      .catch(error => console.error('Error loading the projects:', error));
+        setCurrentIndex(firstProjectIndex >= 0 ? firstProjectIndex : 0);
+      } catch (error) {
+        console.error('Error loading the projects:', error);
+      }
+    };
+  
+    fetchProjects();
   }, []);
 
   // Gérer le passage au projet suivant (décaler d'un index)

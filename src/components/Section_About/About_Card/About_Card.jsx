@@ -1,5 +1,6 @@
 import React from 'react';
-import Button from "../../Button/Button.jsx"
+import Button_Generic from "../../Button_Generic/Button_Generic.jsx"
+import './About_Card.scss'
 
 const About_Card = () => {
   return (
@@ -10,8 +11,8 @@ const About_Card = () => {
         <div className='about_card_avatar_container'>
             <img src="../../../../public/assets/AVATAR.webp" alt="Avatar 3D" className='about_card_avatar'/>
         </div>
-        <div className='about_card_button_container'>
-          <Button onClick={() => alert("Bouton cliqué !")}>Cliquez moi</Button>
+        <div className='button_generic_container'>
+          <Button_Generic onClick={() => alert("Bouton cliqué !")}>Cliquez moi</Button_Generic>
         </div>
     </div>
   );

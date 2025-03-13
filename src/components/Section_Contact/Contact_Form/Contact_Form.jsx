@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Button_Generic from "../../Button_Generic/Button_Generic.jsx"
+import './Contact_Form.scss'
 
 const Contact_Form = () => {
   const [formData, setFormData] = useState({
@@ -79,8 +81,9 @@ const Contact_Form = () => {
           placeholder="Votre message"
         />
       </div>
-
-      <button type="submit">Envoyer</button>
+    <div className='button_generic_container'>
+      <Button_Generic onClick={() => alert("Bouton cliqué !")}>Envoyer</Button_Generic>
+    </div>
     </form>
   );
 };

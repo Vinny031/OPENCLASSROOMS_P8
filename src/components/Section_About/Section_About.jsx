@@ -1,7 +1,8 @@
 import React from 'react';
-import About_Card from './About_Card'
-import About_Infotext from './About_Infotext'
-import About_Attachment from './About_Attachment';
+import About_Card from './About_Card/About_Card.jsx'
+import About_Infotext from './About_Infotext/About_Infotext.jsx'
+import About_Attachment from './About_Attachment/About_Attachment.jsx';
+import './Section_About.scss'
 
 const About = () => {
   return (

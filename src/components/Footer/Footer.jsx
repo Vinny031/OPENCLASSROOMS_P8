@@ -1,4 +1,5 @@
-import SocialIcons from "./Social"
+import SocialIcons from "./Social/Social.jsx"
+import "./Footer.scss"
 
 const Footer = () => {
     return (
@@ -8,4 +9,5 @@ const Footer = () => {
       </footer>
     );
 }
+
 export default Footer;

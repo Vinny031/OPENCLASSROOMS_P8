@@ -1,9 +1,7 @@
 $header-bg: rgba(255, 255, 255, 0.1);
 $header-bg-scrolled: rgba(255, 255, 255, 0.7);
 $text-color: #333;
-$hover-color: #000;
-$font-family: "Gill Sans", sans-serif;
-$underline-color: $hover-color;
+$font-family: Roboto;
 
 body {
   font-family: $font-family;
@@ -34,6 +32,15 @@ body {
     height: 40px;
     display: flex;
     justify-content: flex-start;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1) rotate(-15deg);
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
   }
 
   .nav {
@@ -57,22 +64,17 @@ body {
       color: $text-color;
       font-family: roboto;
       font-size: 14px;
-      font-weight: bold;
       padding: 10px;
       text-transform: uppercase;
       transition: color 0.3s, text-decoration 0.3s;
 
       &:hover {
-        color: $hover-color;
-        text-decoration: underline;
-        text-decoration-color: $underline-color;
+        font-weight: bold;
       }
 
       &.active {
         color: #ff9800;
         font-weight: bold;
-        text-decoration: underline;
-        text-decoration-color: $underline-color;
       }
     }
   }

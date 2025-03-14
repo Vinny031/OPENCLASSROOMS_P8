@@ -12,7 +12,7 @@
         "/data/medias/booki/img_booki_3.webp"
       ],
       "tags": ["HTML", "CSS", "Git/Github"],
-      "type": ["Front-end"],
+      "types": ["FRONT-END"],
       "year": "2024"
     },
     {
@@ -32,7 +32,7 @@
         "/data/medias/sophie_bluel/img_SophieBluel_8.webp"
       ],
       "tags": ["HTML", "CSS", "Git/Github", "JavaScript"],
-      "type": ["Front-end"],
+      "types": ["FRONT-END"],
       "year": "2024"
     },
     {
@@ -51,7 +51,7 @@
         "/data/medias/nina_carducci/img_ninacarducci_7.webp"
       ],
       "tags": ["HTML", "CSS", "Git/Github", "JavaScript", "Lighthouse & Wave"],
-      "type": ["Front-end", "SEO"],
+      "types": ["FRONT-END", "SEO"],
       "year": "2024"
     },
     {
@@ -69,7 +69,7 @@
         "/data/medias/kasa/img_kasa_6.webp"
       ],
       "tags": ["HTML", "CSS", "Git/Github", "React", "React Router", "Vite", "Node.js", "SASS"],
-      "type": ["Front-end"],
+      "types": ["FRONT-END"],
       "year": "2025"
     },
     {
@@ -84,7 +84,7 @@
         "/data/medias/"
       ],
       "tags": ["Node.js", "Express", "Git/Github", "MongoDB", "JWT", "Bcrypt"],
-      "type": ["Back-end"],
+      "types": ["BACK-END"],
       "year": "2025"
     }
   ]

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Astronaut.scss"
 
 const Astronaut = () => {
   return (

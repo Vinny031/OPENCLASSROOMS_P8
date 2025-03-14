@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Projects_Card from './Projects_Card/Projects_Card.jsx';
-import './section_projects.scss';
+import './Section_Projects.scss';
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,22 +56,20 @@ const Projects = () => {
         </button>
 
         <div className="section_projects_carousel_cards">
-          {/* Vérifie que projects contient bien au moins 3 éléments */}
-          {projects.length > 0 && projects
-            .concat(projects)
-            .slice(currentIndex, currentIndex + Math.min(3, projects.length))
-            .map((project) => (
-              <Projects_Card
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                images={project.images}
-                url={project.url}
-                video={project.video}
-                tags={project.tags}
-                year={project.year}
-              />
-            ))}
+          {/* Affiche un seul projet */}
+          {projects.length > 0 && (
+            <Projects_Card
+              key={projects[currentIndex].id}
+              title={projects[currentIndex].title}
+              description={projects[currentIndex].description}
+              images={projects[currentIndex].images}
+              url={projects[currentIndex].url}
+              video={projects[currentIndex].video}
+              tags={projects[currentIndex].tags}
+              types={projects[currentIndex].types}
+              year={projects[currentIndex].year}
+            />
+          )}
         </div>
 
         <button className="section_projects_carousel_button next" onClick={handleNext} disabled={projects.length === 0}>

@@ -1,6 +1,7 @@
 import Header from "@/components/Header/Header.jsx"
 import Footer from "@/components/Footer/Footer.jsx"
 import Astronaut from "@/components/Astronaut/Astronaut.jsx"
+import "./Error.scss"
 import { useEffect } from "react"
 import { Link } from 'react-router-dom'
 

@@ -39,11 +39,15 @@ const Contact_Form = () => {
     e.preventDefault();
 
     // Envoi de l'email avec emailjs
-    emailjs
-      .sendForm('service_kcwbjmd', 'template_excnu77', form.current, {
-        publicKey: 'UGHvjOzTeBi97IoDi',
-      })
-      .then(
+        emailjs.sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+          form.current, 
+          {
+            publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+          }
+        )
+        .then(
         () => {
           console.log('Email envoyé avec succès!');
           alert('Votre message a été envoyé!');

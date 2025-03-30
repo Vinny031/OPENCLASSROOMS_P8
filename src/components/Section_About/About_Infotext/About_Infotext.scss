@@ -1,23 +1,42 @@
 .about-infotext {
-  width: 25%;
-  height: calc(80% - 20px);
-  overflow: hidden;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  padding: 10px 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30vw;
+    min-width: 320px;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.04);
+}
 }
 
 .about-infotext-text {
-  font-family: 'Roboto';
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.5;
-  filter: blur(5px);
-  transition: filter 0.5s ease;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    filter: blur(5px);
+    transition: filter 0.5s ease;
 }
 
-/* Lorsque la classe 'blurred' est présente, enlever le flou */
 .about-infotext-text:not(.blurred) {
-  filter: none;
+    filter: none;
+}
+
+@media (max-width: 1024px) {
+  .about-infotext {
+    width: 80%;
+    min-width: unset;
+    max-height: 80vh;
+  }
+
+  .about-infotext-text {
+    max-height: 100%;
+    overflow-y: auto;
+  }
 }

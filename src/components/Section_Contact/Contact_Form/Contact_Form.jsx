@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import Button_Generic from "../../Button_Generic/Button_Generic.jsx"
-import './Contact_Form.scss'
+import './Contact_Form.scss';
 
 const Contact_Form = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,8 @@ const Contact_Form = () => {
     email: '',
     message: '',
   });
+
+  const form = useRef();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,16 +37,37 @@ const Contact_Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      message: '',
-    });
+
+    // Envoi de l'email avec emailjs
+        emailjs.sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+          form.current, 
+          {
+            publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+          }
+        )
+        .then(
+        () => {
+          console.log('Email envoyé avec succès!');
+          alert('Votre message a été envoyé!');
+          // Réinitialisation du formulaire
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            message: '',
+          });
+        },
+        (error) => {
+          console.log('Erreur lors de l\'envoi de l\'email:', error.text);
+          alert('Une erreur est survenue. Veuillez réessayer.');
+        }
+      );
   };
 
   return (
-    <form className="contact_form" onSubmit={handleSubmit}>
+    <form className="contact_form" ref={form} onSubmit={handleSubmit}>
       <h3>Contactez moi !</h3>
 
       <div className="contact_form_input_group">
@@ -81,9 +105,10 @@ const Contact_Form = () => {
           placeholder="Votre message"
         />
       </div>
-    <div className='button_generic_container'>
-      <Button_Generic onClick={() => alert("Bouton cliqué !")}>Envoyer</Button_Generic>
-    </div>
+
+      <div className='button_generic_container'>
+        <Button_Generic type="submit">Envoyer</Button_Generic>
+      </div>
     </form>
   );
 };

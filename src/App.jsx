@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "@/pages/Home/Home.jsx";
-import Error from "@/pages/Error";
+import Error from "@/pages/Error/Error.jsx";
 import "@/styles/main.scss";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => {
   return (

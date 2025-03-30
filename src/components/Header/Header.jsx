@@ -1,40 +1,74 @@
-import ThemeToggle from "./Toggle_DarkMode/Toggle_DarkMode.jsx";
-import LanguageToggle from "./Toggle_Language/Toggle_Language.jsx";
+import { useState } from "react";
 import { Link } from "react-scroll";
-import "./Header.scss"
+import "./Header.scss";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="header">
-      <LanguageToggle />
       <Link to="home" smooth={true} duration={500} className="header_logo">
-        <img src="/public/favicon.webp" alt="Logo" />
+        <img src="/favicon.webp" alt="Logo" />
       </Link>
-      <nav className="nav">
+
+      <i
+        className={`fa-solid ${menuOpen ? "fa-times" : "fa-bars"} hamburger-icon`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      ></i>
+
+      <nav className={`nav ${menuOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <Link to="about" smooth={true} duration={500} offset={-50} activeClass="active" spy={true}>
+            <Link 
+              to="about" 
+              smooth={true} 
+              duration={500} 
+              onClick={() => setMenuOpen(false)}
+              activeClass="active"
+              spy={true}
+            >
               À propos
             </Link>
           </li>
           <li>
-            <Link to="projects" smooth={true} duration={500} offset={-50} activeClass="active" spy={true}>
+            <Link 
+              to="section_projects" 
+              smooth={true} 
+              duration={500} 
+              onClick={() => setMenuOpen(false)}
+              activeClass="active"
+              spy={true}
+            >
               Projets
             </Link>
           </li>
           <li>
-            <Link to="skills" smooth={true} duration={500} offset={-50} activeClass="active" spy={true}>
+            <Link 
+              to="section_skills" 
+              smooth={true} 
+              duration={500} 
+              offset={-50} 
+              activeClass="active" 
+              spy={true}
+              onClick={() => setMenuOpen(false)}
+            >
               Compétences
             </Link>
           </li>
           <li>
-            <Link to="contact" smooth={true} duration={500} offset={-50} activeClass="active" spy={true}>
+            <Link 
+              to="section_contact" 
+              smooth={true} 
+              duration={500} 
+              onClick={() => setMenuOpen(false)}
+              activeClass="active"
+              spy={true}
+            >
               Contact
             </Link>
           </li>
         </ul>
       </nav>
-      <ThemeToggle />
     </header>
   );
 };

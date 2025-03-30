@@ -1,111 +1,108 @@
 .about_attachment {
-    text-align: center;
-    width: 25%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    // Miniature du CV
-    .cv_thumbnail {
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.2s ease-in-out;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      border: 1px solid #212121;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  min-width: 320px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  position: relative;
+}
 
-      &:hover {
-        transform: scale(1.04);
-      }
-    }
-  }
-  
-  // Modale
-  .modal_overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    animation: fadeIn 0.3s ease-in-out;
-  
-    .modal_content {
-      width: 80vw;
-      height: 90vh;
-      background: white;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      padding: 10px;
-      overflow: hidden;
-      animation: slideDown 0.3s ease-in-out;
-    }
-  
-    .close_button {
-      position: absolute;
-      top: 10px;
-      right: 30px;
-      background: none;
-      border: none;
-      font-size: 40px;
-      cursor: pointer;
-      color: #333;
-      transition: transform 0.2s ease-in-out;
-  
-      &:hover {
-        transform: rotate(45deg);
-      }
-    }
+// Miniature du CV uniquement affichée si la modale est fermée
+.cv_thumbnail {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #212121;
 
-    .download_button {
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      background: none;
-      border: none;
-      font-size: 30px;
-      cursor: pointer;
-      color: #333;
-      transition: transform 0.2s ease-in-out;
-  
-      &:hover {
-          transform: scale(1.1);
-      }
+  &:hover {
+      transform: scale(1.04);
   }
-  
-    .cv_viewer {
-      flex-grow: 1;
-      width: 100%;
-      height: 100%;
-      border: none;
-      object-fit: contain;
-    }
+}
+
+// === Modale qui prend 50vw/90vh de l'écran === //
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal_content {
+  width: 70vw;
+  height: 90vh;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px;
+  overflow: hidden;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+.close_button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+      transform: rotate(45deg);
   }
-  
-  // Animations
-  @keyframes fadeIn {
-    from {
+}
+
+.cv_viewer {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: contain;
+}
+
+// Désactiver le scroll en arrière-plan quand la modale est ouverte
+body.modal_open {
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
       opacity: 0;
-    }
-    to {
+  }
+  to {
       opacity: 1;
-    }
   }
-  
-  @keyframes slideDown {
-    from {
+}
+
+@keyframes slideDown {
+  from {
       transform: translateY(-20px);
-    }
-    to {
-      transform: translateY(0);
-    }
   }
-  
+  to {
+      transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .about_attachment {
+      width: 80%;
+      min-width: unset;
+  }
+}

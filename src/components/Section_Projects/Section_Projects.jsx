@@ -44,6 +44,22 @@ const Projects = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
   };
 
+  // Gérer la navigation au clavier
+  const handleKeyDown = (event) => {
+    if (event.key === 'ArrowRight') {
+      handleNext();
+    } else if (event.key === 'ArrowLeft') {
+      handlePrev();
+    }
+  };
+
+  // Ajout d'un écouteur d'événement pour la navigation au clavier
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [projects]);
   return (
     <section className="section_projects" id="projects">
       <div className="section_projects_title">
@@ -56,7 +72,6 @@ const Projects = () => {
         </button>
 
         <div className="section_projects_carousel_cards">
-          {/* Affiche un seul projet */}
           {projects.length > 0 && (
             <Projects_Card
               key={projects[currentIndex].id}

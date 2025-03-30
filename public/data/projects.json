@@ -19,7 +19,7 @@
       "id": "2",
       "title": "Sophie Bluel, développement d'une page web dynamique avec JavaScript",
       "description": "J’ai développé la partie front-end du site d’une architecte d’intérieur en utilisant JavaScript pour rendre le site interactif et dynamique. Cela incluait l’utilisation de JavaScript pour manipuler le DOM, gérer les événements utilisateurs, et effectuer des appels API pour récupérer des données en temps réel. Ce projet a également inclus la gestion d’une galerie d’images et la création d’une interface fluide et moderne avec des animations simples.",
-      "url": "",
+      "url": "https://github.com/Vinny031/OPENCLASSROOMS_P3",
       "video": "/data/medias/sophie_bluel/vid_SophieBluel.webm",
       "images": [
         "/data/medias/sophie_bluel/img_SophieBluel_1.webp",
@@ -77,11 +77,16 @@
       "title": "Mon Vieux Grimmoire, développement du back-end d'un site de notation de livres",
       "description": "Dans ce projet, j'ai développé le back-end d'un site de notation de livres en utilisant Node.js avec Express pour créer le serveur et le connecter à une base de données MongoDB. J'ai conçu la structure du serveur et géré la communication entre celui-ci et la base de données en utilisant Mongoose pour modéliser les données. Le système que j'ai développé permet de gérer les opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) pour les livres et les notations, avec une attention particulière à la sécurité des données. J'ai également implémenté un système d'authentification sécurisé pour les utilisateurs du site, ainsi qu'une gestion optimisée des images téléchargées. Une fonctionnalité pour noter les livres et calculer la note moyenne a aussi été ajoutée. Ce projet m'a permis de renforcer mes compétences en développement back-end, en sécurisation des données, et en architecture MVC (Modèle-Vue-Contrôleur), des compétences essentielles pour créer des applications web robustes et performantes.",
       "url": "https://vinny031.github.io/OPENCLASSROOMS_P6/",
-      "video": "",
+      "video": "/data/medias/mon_vieux_grimmoire/vid_mon_vieux_grimmoire.webm",
       "images": [
-        "/data/medias/",
-        "/data/medias/",
-        "/data/medias/"
+        "/data/medias/mon_vieux_grimmoire/img_mon_vieux_grimmoire_1.webp",
+        "/data/medias/mon_vieux_grimmoire/img_mon_vieux_grimmoire_2.webp",
+        "/data/medias/mon_vieux_grimmoire/img_mon_vieux_grimmoire_3.webp",
+        "/data/medias/mon_vieux_grimmoire/img_mon_vieux_grimmoire_4.webp",
+        "/data/medias/mon_vieux_grimmoire/img_mon_vieux_grimmoire_5.webp",
+        "/data/medias/mon_vieux_grimmoire/img_mon_vieux_grimmoire_6.webp",
+        "/data/medias/mon_vieux_grimmoire/img_mon_vieux_grimmoire_7.webp",
+        "/data/medias/mon_vieux_grimmoire/img_mon_vieux_grimmoire_8.webp"
       ],
       "tags": ["Node.js", "Express", "Git/Github", "MongoDB", "JWT", "Bcrypt"],
       "types": ["BACK-END"],

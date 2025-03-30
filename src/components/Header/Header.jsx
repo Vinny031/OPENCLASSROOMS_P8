@@ -20,7 +20,7 @@ const Header = () => {
         <ul>
           <li>
             <Link 
-              to="about" 
+              to="section_about" 
               smooth={true} 
               duration={500} 
               onClick={() => setMenuOpen(false)}

@@ -19,17 +19,14 @@ const About_Attachment = () => {
 
   return (
     <div className="about_attachment">
-      {/* Image affichée uniquement si la modale est fermée */}
-      {!isOpen && (
-        <img 
-          src="/assets/CV_DEV.webp" 
-          alt="Voir le CV" 
-          className="cv_thumbnail" 
-          onClick={() => setIsOpen(true)} 
-        />
-      )}
+      <img 
+        src="/assets/CV_DEV.webp" 
+        alt="Voir le CV" 
+        className={`cv_thumbnail ${isOpen ? "open" : ""}`}
+        onClick={() => setIsOpen(true)} 
+      />
 
-      {/* Modale qui prend 50vw/90vh de l'écran */}
+      {/* Modale */}
       {isOpen && (
         <div className="modal_overlay" onClick={closeModal}>
           <div className="modal_content" onClick={(e) => e.stopPropagation()}>

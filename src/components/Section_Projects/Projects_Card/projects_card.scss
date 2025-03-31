@@ -1,108 +1,173 @@
 .project_card {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.project_card_media {
-  width: 40vw;
-  height: 100%;
   position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .project_card_video_container {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-
 }
 
 .project_card_video_container video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px 0 0 10px;
 }
 
-.empty_image {
-  background-color: white;
+.project_card_tags {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.project_card_tag {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.project_card_title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #333333;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.project_card_images {
-  width: 10vw;
-  height: 100%;
-  overflow-y: scroll;
+.modal_images_carousel {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  width: 100%;
+  height: 15vh;
+  margin: 20px 0;
+  padding-bottom: 10px;
+}
+
+.images_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.images_carousel {
+  display: flex;
   gap: 10px;
 }
 
-.project_card_images_container {
-  display: flex;
-  flex-direction: column;
+.modal_image {
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.project_card_image {
+/* Modale */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 10vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.modal_content {
+  position: relative;
+  width: 60vw;
+  height: 90vh;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal_video_container {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+.modal_video_container video {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.project_card_right {
-  width: 40vw;
+.modal_tags {
+  position: absolute;
+  top: 10px;
+  left: 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.project_card_types {
-  display: flex;
-  flex-wrap: wrap;
   gap: 5px;
-  margin-bottom: 10px;
-  padding: 5px;
 }
 
-.project_card_type {
-  background-color: #f1f1f1;
+.modal_tag {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
   padding: 5px 10px;
+  border-radius: 5px;
   font-size: 12px;
-  color: #333;
-  text-transform: capitalize;
 }
 
-.project_card_title h3 {
-  padding: 5px;
-  font-size: 1.2rem;
-  font-family: roboto;
-  font-weight: 700;
+.modal_title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.project_card_description {
-  padding: 10px;
-  font-size: 0.9rem;
-  color: #666;
+.modal_description {
+  padding: 20px;
+  font-size: 14px;
+  color: #333;
   text-align: justify;
 }
 
-.project_card_url {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #0073e6;
+.modal_url {
+  padding: 10px;
   text-align: center;
+}
+
+.modal_url a {
+  font-size: 14px;
+  color: #0073e6;
   text-decoration: underline;
+}
+
+.close_modal_button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
 }

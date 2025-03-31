@@ -1,11 +1,11 @@
 .section_projects {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; // Ajusté pour éviter d'imposer une hauteur fixe
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     background-color: #e8e8e8;
+    padding: 20px;
 }
 
 .section_projects_title {
@@ -15,29 +15,20 @@
     align-items: center;
     justify-content: center;
     background-color: white;
+    margin-bottom: 20px;
 }
 
-.section_projects_carousel {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 90%;
+.section_projects_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Responsive
+    gap: 20px;
     width: 100%;
-    overflow: hidden;
+    max-width: 1200px; // Évite que la grille soit trop large sur les grands écrans
+    padding: 20px;
 }
 
-.section_projects_carousel_button {
-    background-color: #333333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.section_projects_carousel_cards {
-    display: flex;
-    gap: 50px;
-    width: 100%;
-    height: 90%;
-    justify-content: center;
+@media (max-width: 768px) {
+    .section_projects_grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Adapté aux petits écrans
+    }
 }

@@ -1,19 +1,97 @@
 .section_skills {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #e8e8e8;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    background-color: #e8e8e8;
-}
+    padding: 2rem;
 
-.section_skills_title{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
+    .section_skills_title {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .skills_section {
+        width: 100%;
+        max-width: 1200px;
+        margin-bottom: 3rem;
+
+        .category_title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .skills_grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            justify-items: center;
+        
+            @media (max-width: 780px) {
+                grid-template-columns: 1fr;
+            }
+        
+            @media (max-width: 480px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    .skill_card {
+        width: 40%;
+        aspect-ratio: 1 / 1;
+        perspective: 1000px;
+        cursor: pointer;
+        position: relative;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        .card_front, .card_back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: transform 0.6s;
+        }
+
+        .card_front {
+            background: white;
+        }
+
+        .card_back {
+            background: #333333;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        &.flipped {
+            .card_front {
+                transform: rotateY(180deg);
+            }
+            .card_back {
+                transform: rotateY(0deg);
+            }
+        }
+    }
+
+    .skill_icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0.5rem;
+    }
 }

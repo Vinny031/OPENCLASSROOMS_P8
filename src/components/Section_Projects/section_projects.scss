@@ -1,6 +1,6 @@
 .section_projects {
     width: 100%;
-    min-height: 100vh; // Ajusté pour éviter d'imposer une hauteur fixe
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,15 +20,14 @@
 
 .section_projects_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Responsive
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
     width: 100%;
-    max-width: 1200px; // Évite que la grille soit trop large sur les grands écrans
     padding: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .section_projects_grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Adapté aux petits écrans
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }

@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #e8e8e8;
+    padding: 20px 50px;
 }
 
 .section_contact_title{
@@ -15,7 +15,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
   }
 
 .contact_form_container {
@@ -24,4 +23,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 120px;
 }

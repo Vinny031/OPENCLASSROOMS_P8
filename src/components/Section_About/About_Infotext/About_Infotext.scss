@@ -13,17 +13,15 @@
 }
 
 .about-infotext-text {
-  font-family: 'Roboto';
   font-size: 1rem;
-  color: #333;
   line-height: 1.5;
   filter: blur(5px);
   transition: filter 0.5s ease;
-
-  /* Ajout pour le scroll */
   flex-grow: 1;
   max-height: 100%;
   overflow-y: auto;
+  text-transform: none;
+  text-align:justify;
 }
 
 .about-infotext-text:not(.blurred) {

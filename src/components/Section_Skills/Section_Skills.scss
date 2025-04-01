@@ -31,13 +31,14 @@
         }
 
         .skills_grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-direction: row;
             gap: 2rem;
             justify-items: center;
         
             @media (max-width: 780px) {
-                grid-template-columns: 1fr;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
             }
         
             @media (max-width: 480px) {
@@ -46,7 +47,8 @@
         }
     }
     .skill_card {
-        width: 40%;
+        width: 50%;
+        min-width: 150px;
         aspect-ratio: 1 / 1;
         perspective: 1000px;
         cursor: pointer;
@@ -90,8 +92,8 @@
     }
 
     .skill_icon {
-        width: 50px;
         height: 50px;
+        aspect-ratio: 1/1;
         margin-bottom: 0.5rem;
     }
 }

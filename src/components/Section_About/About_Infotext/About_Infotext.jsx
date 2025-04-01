@@ -5,16 +5,17 @@ const About_Infotext = ({ isBlurred }) => {
   return (
     <div className="about-infotext">
       <p className={`about-infotext-text ${isBlurred ? 'blurred' : ''}`}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. 
-        Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. 
-        Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. 
-        Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. 
-        Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. 
-        Praesent egestas leo in pede. Praesent blandit odio eu enim. 
-        Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus 
-        et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. 
-        Maecenas adipiscing ante non diam sodales hendrerit.
+        Je suis actuellement en fin de formation RNCP Niveau 5 en développement web chez OpenClassrooms, et je poursuis mon apprentissage avec une formation en développement d'application Python (RNCP Niveau 6). Fort d'un parcours diversifié et de compétences acquises en gestion forestière et en soins, j'ai su développer une forte capacité d'adaptation et de résilience face à des environnements variés. Mon objectif est de renforcer mes compétences en développement web, API et gestion de bases de données, et de contribuer à des projets concrets et innovants. Passionné par l'apprentissage et la résolution de problèmes, je recherche une alternance qui me permettra de mettre en pratique mes connaissances tout en continuant à évoluer techniquement.
+        <br />
+        Compétences clés :
+        <ul>
+          <li>Développement web (HTML, CSS, JavaScript, React)</li>
+          <li>Développement Python et gestion des API</li>
+          <li>Maîtrise des bases de données (SQL, NoSQL)</li>
+          <li>Résolution de problèmes complexes et approche analytique</li>
+          <li>Collaboration efficace au sein d’équipes pluridisciplinaires</li>
+        </ul>
+        Mon expérience dans des secteurs variés m'a permis de développer une rigueur organisationnelle et une communication fluide, atouts précieux dans mon évolution en tant que développeur.
       </p>
     </div>
   );

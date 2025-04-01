@@ -10,6 +10,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   height: 90%;
+  min-height: 400px;
 }
 
 .contact_form h3 {
@@ -21,37 +22,46 @@
 .contact_form_input_group {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
 }
 
-.contact_form_input_group label {
-  position: relative;
-}
-
-.contact_form_input_group input,
-.contact_form_input_group textarea {
+.contact_form_input_group input {
   width: 100%;
-  padding: 10px 10px 20px 10px;
+  padding: 10px;
   outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+  height: 40px;
+}
+
+.contact_form_textarea_group {
+  flex-grow: 1;
+  display: flex;
+}
+
+.contact_form_textarea_group textarea {
+  width: 100%;
+  flex-grow: 1;
+  min-height: 150px;
+  resize: none;
+  padding: 10px;
   border: 1px solid rgba(105, 105, 105, 0.397);
   border-radius: 5px;
   font-size: 14px;
   background-color: white;
 }
 
-.contact_form_input_group textarea {
-  height: 150px;
-  resize: none;
-}
-
 .contact_form_input_group input:focus,
-.contact_form_input_group textarea:focus {
+.contact_form_textarea_group textarea:focus {
   border-color: #333;
   box-shadow: 0 0 5px rgba(64, 65, 65, 0.5);
 }
 
+/* Style des labels dynamiques */
 .contact_form_input_group input + span,
-.contact_form_input_group textarea + span {
+.contact_form_textarea_group textarea + span {
   position: absolute;
   left: 10px;
   top: 15px;
@@ -61,10 +71,11 @@
   cursor: text;
 }
 
+/* Animation du label */
 .contact_form_input_group input:focus + span,
-.contact_form_input_group textarea:focus + span,
+.contact_form_textarea_group textarea:focus + span,
 .contact_form_input_group input:valid + span,
-.contact_form_input_group textarea:valid + span {
+.contact_form_textarea_group textarea:valid + span {
   top: 30px;
   font-size: 0.7em;
   font-weight: 600;

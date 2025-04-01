@@ -34,7 +34,7 @@
                 "description": "Framework pour Node.js pour créer des APIs et gérer les routes."
             },
             {
-                "icon": "/assets/icon/db.webp",
+                "icon": "/assets/icon/data.webp",
                 "title": "Base de données",
                 "description": "SQL, NoSQL, gestion des données et intégration avec les applications."
             },

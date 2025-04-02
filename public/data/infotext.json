@@ -1,0 +1,32 @@
+{
+    "formation_actuelle": {
+      "titre": "RNCP Niveau 5 en développement web",
+      "ecole": "OpenClassrooms",
+      "formation_suivante": {
+        "titre": "RNCP Niveau 6 en développement d'application JavaScript React"
+      }
+    },
+    "parcours": {
+      "domaines": ["gestion forestière", "soins"],
+      "competences_acquises": ["adaptation", "résilience"]
+    },
+    "objectifs": [
+      "Renforcer mes compétences en développement web, API et gestion de bases de données",
+      "Contribuer à des projets concrets et innovants"
+    ],
+    "recherche": {
+      "type": "alternance",
+      "objectif": "Mettre en pratique mes connaissances et évoluer techniquement"
+    },
+    "competences_cles": [
+      "Développement web (HTML, CSS, JavaScript, React)",
+      "Développement JavaScript React et gestion des API",
+      "Maîtrise des bases de données (SQL, NoSQL)",
+      "Résolution de problèmes complexes et approche analytique",
+      "Collaboration efficace au sein d’équipes pluridisciplinaires"
+    ],
+    "atouts": [
+      "Rigueur organisationnelle",
+      "Communication fluide"
+    ]
+  }

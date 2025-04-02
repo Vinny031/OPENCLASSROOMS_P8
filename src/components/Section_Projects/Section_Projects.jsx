@@ -11,7 +11,7 @@ const Projects = () => {
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), 2000);
 
-        const response = await fetch('/data/projects.json', { signal: controller.signal });
+        const response = await fetch('/OPENCLASSROOMS_P8/data/projects.json', { signal: controller.signal });
         const data = await response.json();
 
         clearTimeout(timeout);

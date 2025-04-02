@@ -3,10 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://https://Vinny031.github.io/OPENCLASSROOMS_P8/",
+  "homepage": "https://Vinny031.github.io/OPENCLASSROOMS_P8/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "build": "vite build",

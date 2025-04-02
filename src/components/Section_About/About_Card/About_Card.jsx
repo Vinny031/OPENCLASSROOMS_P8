@@ -10,7 +10,7 @@ const About_Card = ({ toggleBlur }) => {
       </div>
       <div className="about_card_avatar_container">
         <img
-          src="./assets/icon/avatar-3d.webp"
+          src="/OPENCLASSROOMS_P8/assets/icon/avatar-3d.webp"
           alt="Avatar 3D"
           className="about_card_avatar"
         />

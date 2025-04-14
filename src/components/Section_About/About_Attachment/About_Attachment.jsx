@@ -20,7 +20,7 @@ const About_Attachment = () => {
   return (
     <div className="about_attachment">
       <img 
-        src="/OPENCLASSROOMS_P8/assets/CV_DEV.webp" 
+        src="/assets/CV_DEV.webp" 
         alt="Voir le CV" 
         className={`cv_thumbnail ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen(true)} 
@@ -34,7 +34,7 @@ const About_Attachment = () => {
               <FaTimes />
             </button>
             <iframe 
-              src="/OPENCLASSROOMS_P8/assets/CV_DEV.pdf"  
+              src="/assets/CV_DEV.pdf"  
               title="CV" 
               className="cv_viewer"
             ></iframe>

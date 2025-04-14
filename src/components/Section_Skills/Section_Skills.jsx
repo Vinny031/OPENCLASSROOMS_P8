@@ -6,7 +6,7 @@ const Skills = () => {
   const [flipped, setFlipped] = useState({});
 
   useEffect(() => {
-    fetch('/OPENCLASSROOMS_P8/data/skills.json')
+    fetch('/data/skills.json')
       .then((response) => response.json())
       .then((data) => setSkillsData(data.skills))
       .catch((error) => console.error("Erreur de chargement des compétences :", error));

@@ -5,7 +5,7 @@ const About_Infotext = ({ isBlurred }) => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch('/OPENCLASSROOMS_P8/data/infotext.json')
+    fetch('/data/infotext.json')
       .then((response) => response.json())
       .then((jsonData) => setData(jsonData))
       .catch((error) => console.error('Erreur de chargement du JSON :', error));

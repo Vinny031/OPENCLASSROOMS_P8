@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="header">
       <Link to="home" smooth={true} duration={500} className="header_logo">
-        <img src="/OPENCLASSROOMS_P8/favicon.webp" alt="Logo" />
+        <img src="/favicon.webp" alt="Logo" />
       </Link>
 
       <i

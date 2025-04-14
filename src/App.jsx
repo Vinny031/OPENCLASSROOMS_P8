@@ -6,7 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => {
   return (
-    <Router basename="/OPENCLASSROOMS_P8">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/error" element={<Error />} />

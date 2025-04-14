@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Projects_Card from './Projects_Card/Projects_Card.jsx';
 import './Section_Projects.scss';
 
-
 const Projects = () => {
   const [projects, setProjects] = useState([]);
 
